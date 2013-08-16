@@ -21,6 +21,8 @@
 		370244AF17BCD2750053DE8E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3702449117BCD2750053DE8E /* UIKit.framework */; };
 		370244B717BCD2750053DE8E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 370244B517BCD2750053DE8E /* InfoPlist.strings */; };
 		370244B917BCD2750053DE8E /* Fuzzy_ChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370244B817BCD2750053DE8E /* Fuzzy_ChatTests.m */; };
+		370244C417BCE24D0053DE8E /* NSString+FCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 370244C317BCE24D0053DE8E /* NSString+FCUtils.m */; };
+		370244C517BCE24D0053DE8E /* NSString+FCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 370244C317BCE24D0053DE8E /* NSString+FCUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		370244B417BCD2750053DE8E /* Fuzzy ChatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Fuzzy ChatTests-Info.plist"; sourceTree = "<group>"; };
 		370244B617BCD2750053DE8E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		370244B817BCD2750053DE8E /* Fuzzy_ChatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Fuzzy_ChatTests.m; sourceTree = "<group>"; };
+		370244C217BCE24D0053DE8E /* NSString+FCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FCUtils.h"; sourceTree = "<group>"; };
+		370244C317BCE24D0053DE8E /* NSString+FCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FCUtils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				3702449C17BCD2750053DE8E /* FCAppDelegate.h */,
+				370244C217BCE24D0053DE8E /* NSString+FCUtils.h */,
+				370244C317BCE24D0053DE8E /* NSString+FCUtils.m */,
 				3702449D17BCD2750053DE8E /* FCAppDelegate.m */,
 				3702449F17BCD2750053DE8E /* Main.storyboard */,
 				370244A217BCD2750053DE8E /* FCViewController.h */,
@@ -200,6 +206,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Dmitry Volkov";
 				TargetAttributes = {
+					3702448917BCD2750053DE8E = {
+						DevelopmentTeam = QRXPM3JXSR;
+					};
 					370244AA17BCD2750053DE8E = {
 						TestTargetID = 3702448917BCD2750053DE8E;
 					};
@@ -252,6 +261,7 @@
 			files = (
 				3702449A17BCD2750053DE8E /* main.m in Sources */,
 				3702449E17BCD2750053DE8E /* FCAppDelegate.m in Sources */,
+				370244C417BCE24D0053DE8E /* NSString+FCUtils.m in Sources */,
 				370244A417BCD2750053DE8E /* FCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				370244C517BCE24D0053DE8E /* NSString+FCUtils.m in Sources */,
 				370244B917BCD2750053DE8E /* Fuzzy_ChatTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,10 +386,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dmitry Volkov (Q6J892BNV4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dmitry Volkov (Q6J892BNV4)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Fuzzy Chat/Fuzzy Chat-Prefix.pch";
 				INFOPLIST_FILE = "Fuzzy Chat/Fuzzy Chat-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -388,10 +402,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Fuzzy Chat/Fuzzy Chat-Prefix.pch";
 				INFOPLIST_FILE = "Fuzzy Chat/Fuzzy Chat-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -455,6 +472,7 @@
 				370244BE17BCD2750053DE8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		370244BF17BCD2750053DE8E /* Build configuration list for PBXNativeTarget "Fuzzy ChatTests" */ = {
 			isa = XCConfigurationList;
@@ -463,6 +481,7 @@
 				370244C117BCD2750053DE8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

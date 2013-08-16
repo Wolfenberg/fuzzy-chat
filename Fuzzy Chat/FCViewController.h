@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FCViewController : UIViewController
+@interface FCViewController : UIViewController <UITextFieldDelegate>
+
+@property (nonatomic, weak) IBOutlet UITextView *textView;
+
+- (IBAction)fuzzIt:(id)sender;
+- (IBAction)clear:(id)sender;
 
 @end
